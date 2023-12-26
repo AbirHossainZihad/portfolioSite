@@ -273,17 +273,29 @@ nav {
 }
 
 .portfolio__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
     overflow: hidden;
+    padding-bottom: 30px;
     border-radius: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .portfolio__card img {
+    width: 100%;
+    height: 250px;
     transition: 0.5s;
 }
 
 .portfolio__card:hover img {
     transform: scale(1.1);
+}
+
+.portfolio__card p{
+    height: 170px;
+    text-align: center;
 }
 
 .portfolio__banner {
@@ -316,12 +328,17 @@ nav {
     text-align: center;
 }
 
+.form_wrapper_div{
+    width: max-content;
+    margin: 30px auto;
+}
+
 .contact__container .logo {
     margin-bottom: 1rem;
 }
 
 .contact__socials {
-    margin-top: 2rem;
+    margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -343,6 +360,100 @@ nav {
     background: var(--gradient-2);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* form added later */
+.formContact {
+    width: 300px;
+    height: 440px;
+    border-radius: 8px;
+    padding: 20px 30px;
+    position: relative;
+    background-image: var(--gradient-2);
+}
+
+.formContact h2 {
+    margin: 10px 0;
+    padding-bottom: 10px;
+    width: 180px;
+    border-bottom: 3px solid #78788c
+}
+
+.formContact input {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    transition: all .3s;
+    border-bottom: 2px solid #bebed2
+}
+
+textarea {
+    margin-top: 10px;
+    min-width: 200px;
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+
+.formContact input:focus {
+    border-bottom: 2px solid #78788c
+}
+
+.formContact .formLabel::before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+.formContact button {
+    float: right;
+    padding: 8px 12px;
+    margin-top: 20px;
+    border: 2px solid #78788c;
+    background-color: gray;
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .3s
+}
+
+.formContact button:hover {
+    background-image: var(--gradient-2);
+    color: #fff;
+}
+
+.formContact div {
+    position: absolute;
+    bottom: -55px;
+    right: 8px;
+    background: #50505a;
+    color: #fff;
+    width: 280px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 10px 10px 40px -14px #000
+}
+
+.formContact span:nth-child(1) {
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.formContact span:nth-child(2){
+    font-size: 13px;
+}
+
+.formContact span i{
+    font-size: 18px;
+    margin-right: 10px;
+}
+/* form css code finsih here */
 
 .footer {
     padding: 1rem;

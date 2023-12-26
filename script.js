@@ -16,3 +16,8 @@ navLinks.addEventListener("click", (e) => {
   navLinks.classList.remove("open");
   menuBtnIcon.setAttribute("class", "ri-menu-3-line");
 });
+
+function resetForm () {
+  const formButton = document.querySelector('.formContact');
+  formButton.reset();
+}
